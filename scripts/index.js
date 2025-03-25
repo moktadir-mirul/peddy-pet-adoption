@@ -12,7 +12,7 @@ const displayCategories = (btnsName) => {
         const div = document.createElement('div');
         div.innerHTML = `
                 <button class="px-16 py-5 border border-[#0e7a8126] flex gap-5 justify-between items-center rounded-xl hover:rounded-[120px] hover:bg-[#0E7A811A] duration-300">
-                    <img src="${btn.category_icon}" alt="">
+                    <img class="w-8" src="${btn.category_icon}" alt="">
                     <p class="font-extrabold">${btn.category}</p>
                 </button>
         `
