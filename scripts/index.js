@@ -11,12 +11,58 @@ const displayCategories = (btnsName) => {
         const btnContainer = document.getElementById('btn-container');
         const div = document.createElement('div');
         div.innerHTML = `
-                <button class="px-16 py-5 border border-[#0e7a8126] flex gap-5 justify-between items-center rounded-xl hover:rounded-[120px] hover:bg-[#0E7A811A] duration-300">
+                <button onclick="loadPets('${btn.category}')" class="px-16 py-5 border border-[#0e7a8126] flex gap-5 justify-between items-center rounded-xl hover:rounded-[120px] hover:bg-[#0E7A811A] duration-300">
                     <img class="w-8" src="${btn.category_icon}" alt="">
                     <p class="font-extrabold">${btn.category}</p>
                 </button>
         `
         btnContainer.appendChild(div);
+    }
+}
+
+const loadPets = (petCategory) => {
+    fetch(`https://openapi.programming-hero.com/api/peddy/category/${petCategory}`)
+    .then(res => res.json())
+    .then(data => displayPets(data.data))
+}
+
+const displayPets = (pets) => {
+    console.log(pets);
+    const petContainer = document.getElementById('pet-container');
+        petContainer.innerHTML='';
+        if(pets.length <=0) {
+            petContainer.innerHTML = `<h1 class="text-2xl text-center text-red-600 font-bold">No Data Found</h1>`
+            return;
+        }
+    for(let pet of pets) {
+        
+        const div = document.createElement('div');
+        div.innerHTML = `
+        <div class="p-4 space-y-4 border border-gray-300 rounded-lg">
+                    <div>
+                        <img src="${pet.image}" alt="Pet images">
+                    </div>
+                    <div class="space-y-2 pb-2 border-b border-gray-300">
+                        <h1 class="inter text-xl font-extrabold">${pet.pet_name}</h1>
+                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-wind"></i> Breed: ${pet.breed}</p>
+                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-regular fa-calendar"></i> Birth: ${pet.date_of_birth}</p>
+                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-mars-and-venus"></i> Gender: ${pet.gender}</p>
+                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-dollar-sign"></i> Price: ${pet.price}</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300">
+                            <i class="fa-regular fa-thumbs-up"></i> 
+                        </button>
+                        <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]">
+                            Adopt      
+                        </button>
+                        <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300 text-[#0E7A81] font-bold">
+                            Details
+                        </button>
+                    </div>
+                </div>
+        `
+        petContainer.appendChild(div);
     }
 }
 loadButtons()
