@@ -1,225 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Peddy Pet Adoption</title>
     <!-- Daisy UI & Tailwind CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome CDN -->
-    <script src="https://kit.fontawesome.com/5e9ebfc54c.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/5e9ebfc54c.js"
+      crossorigin="anonymous"
+    ></script>
 
     <style>
-        .lato {
-            font-family: "Lato", sans-serif;
-        }
-        .inter {
-            font-family: "Inter", sans-serif;
-        }
+      .lato {
+        font-family: "Lato", sans-serif;
+      }
+      .inter {
+        font-family: "Inter", sans-serif;
+      }
     </style>
-</head>
-<body class="lato">
+  </head>
+  <body class="lato">
     <header>
-        <nav class="w-4/5 mx-auto flex flex-col md:flex-row justify-between items-center py-5 gap-5 md:gap-0">
-            <div class="flex justify-between items-center gap-2">
-                <img src="images/logo.webp" alt="Pet Paw Icon">
-                <h1 class="font-extrabold text-2xl">Peddy</h1>
-            </div>
-            <div class="list-none flex justify-between items-center gap-5">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Contact</a></li>
-            </div>
-            <div >
-                 <i class="fa-solid fa-user w-12 h-12 rounded-full p-4 border border-gray-600"></i>
-            </div>
-        </nav>
+      <nav
+        class="w-4/5 mx-auto flex flex-col md:flex-row justify-between items-center py-5 gap-5 md:gap-0"
+      >
+        <div class="flex justify-between items-center gap-2">
+          <img src="images/logo.webp" alt="Pet Paw Icon" />
+          <h1 class="font-extrabold text-2xl">Peddy</h1>
+        </div>
+        <div class="list-none flex justify-between items-center gap-5">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Contact</a></li>
+        </div>
+        <div>
+          <i
+            class="fa-solid fa-user w-12 h-12 rounded-full p-4 border border-gray-600"
+          ></i>
+        </div>
+      </nav>
     </header>
     <main>
-        <!-- Banner Section -->
-        <section class="py-10 w-4/5 mx-auto text-center flex flex-col justify-center gap-5">
-            <h1 class="font-semibold text-2xl text-gray-600">
-                Bringing Families Together ❤️‍🔥 
-            </h1>
-            <h1 class="max-w-lg mx-auto text-5xl font-extrabold">
-                Your Path to Adoption Starts Here
-            </h1>
-            <p class="max-w-lg mx-auto text-sm text-black font-normal">
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
-            </p>
-            <button class="btn btn-lg w-44 mx-auto bg-[#0E7A81] text-white hover:bg-[#063538] duration-200">
-                <a href="#adopt-area">View More</a>
+      <!-- Banner Section -->
+      <section
+        class="py-10 w-4/5 mx-auto text-center flex flex-col justify-center gap-5"
+      >
+        <h1 class="font-semibold text-2xl text-gray-600">
+          Bringing Families Together ❤️‍🔥
+        </h1>
+        <h1 class="max-w-lg mx-auto text-5xl font-extrabold">
+          Your Path to Adoption Starts Here
+        </h1>
+        <p class="max-w-lg mx-auto text-sm text-black font-normal">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a.
+        </p>
+        <button
+          class="btn btn-lg w-44 mx-auto bg-[#0E7A81] text-white hover:bg-[#063538] duration-200"
+        >
+          <a href="#adopt-area">View More</a>
+        </button>
+        <img class="w-3/5 mx-auto" src="images/pet.webp" alt="Pet Icon" />
+      </section>
+
+      <!-- Adopt Section -->
+      <section id="adopt-area" class="text-center space-y-5">
+        <h1 class="text-3xl text-black font-extrabold max-w-lg mx-auto">
+          Adopt Your Best Friend
+        </h1>
+        <p class="text-sm text-gray-500 font-normal max-w-xl mx-auto">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a.
+        </p>
+        <div
+          id="btn-container"
+          class="py-5 flex flex-wrap justify-center gap-8"
+        ></div>
+        <div
+          class="w-4/5 mx-auto py-6 flex flex-col md:flex-row justify-between items-center gap-5 md:gap-0"
+        >
+          <h1 class="text-2xl font-bold">Best Deal For You</h1>
+          <div>
+            <button
+              class="btn btn-lg w-44 mx-auto bg-[#0E7A81] text-white hover:bg-[#063538] duration-200"
+            >
+              Sort By Price
             </button>
-            <img class="w-3/5 mx-auto" src="images/pet.webp" alt="Pet Icon">
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Adopt Section -->
-        <section id="adopt-area" class="text-center space-y-5">
-            <h1 class="text-3xl text-black font-extrabold max-w-lg mx-auto">
-                Adopt  Your  Best Friend
-            </h1>
-            <p class="text-sm text-gray-500 font-normal max-w-xl mx-auto">
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
-            </p>
-            <div id="btn-container" class="py-5 flex flex-wrap justify-center gap-8">
+      <!-- Pet Display -->
+      <section
+        onclick=""
+        class="w-4/5 py-5 mx-auto grid grid-cols-1 lg:grid-cols-5 gap-3"
+      >
+        <div
+          id="pet-container"
+          class="col-span-4 grid grid-cols-1 lg:grid-cols-3 gap-3"
+        >
+          <!-- Pet Card -->
+          <div class="p-4 space-y-4 border border-gray-300 rounded-lg">
+            <div>
+              <img
+                src="https://i.ibb.co.com/p0w744T/pet-1.jpg"
+                alt="Pet images"
+              />
             </div>
-            <div class="w-4/5 mx-auto py-6 flex flex-col md:flex-row justify-between items-center gap-5 md:gap-0">
-                <h1 class="text-2xl font-bold">
-                    Best Deal For You
-                </h1>
-                <div>
-                    <button class="btn btn-lg w-44 mx-auto bg-[#0E7A81] text-white hover:bg-[#063538] duration-200">
-                        Sort By Price
-                    </button>
-                </div>
+            <div class="space-y-2 pb-2 border-b border-gray-300">
+              <h1 class="inter text-xl font-extrabold">Buddy</h1>
+              <p class="lato text-gray-500 text-base flex items-center gap-5">
+                <i class="fa-solid fa-wind"></i> Breed: Golden Retriever
+              </p>
+              <p class="lato text-gray-500 text-base flex items-center gap-5">
+                <i class="fa-regular fa-calendar"></i> Birth: 2023-01-15
+              </p>
+              <p class="lato text-gray-500 text-base flex items-center gap-5">
+                <i class="fa-solid fa-mars-and-venus"></i> Gender: Female
+              </p>
+              <p class="lato text-gray-500 text-base flex items-center gap-5">
+                <i class="fa-solid fa-dollar-sign"></i> Price: 199$
+              </p>
             </div>
-        </section>
-
-        <!-- Pet Display -->
-        <section onclick="" class="w-4/5 py-5 mx-auto grid grid-cols-1 lg:grid-cols-5 gap-3">
-            <div id="pet-container" class="col-span-4 grid grid-cols-1 lg:grid-cols-3 gap-3">
-                <!-- Pet Card -->
-                <div class="p-4 space-y-4 border border-gray-300 rounded-lg">
-                    <div>
-                        <img src="https://i.ibb.co.com/p0w744T/pet-1.jpg" alt="Pet images">
-                    </div>
-                    <div class="space-y-2 pb-2 border-b border-gray-300">
-                        <h1 class="inter text-xl font-extrabold">Buddy</h1>
-                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-wind"></i> Breed: Golden Retriever</p>
-                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-regular fa-calendar"></i> Birth: 2023-01-15</p>
-                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-mars-and-venus"></i> Gender: Female</p>
-                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-dollar-sign"></i> Price: 199$</p>
-                    </div>
-                    <div class="flex justify-between">
-                        <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300">
-                            <i class="fa-regular fa-thumbs-up"></i> 
-                        </button>
-                        <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]">
-                            Adopt      
-                        </button>
-                        <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300 text-[#0E7A81] font-bold">
-                            Details
-                        </button>
-                    </div>
-                </div>
-
-                <div class="p-4 space-y-4 border border-gray-300 rounded-lg">
-                    <div>
-                        <img src="https://i.ibb.co.com/p0w744T/pet-1.jpg" alt="Pet images">
-                    </div>
-                    <div class="space-y-2 pb-2 border-b border-gray-300">
-                        <h1 class="inter text-xl font-extrabold">Buddy</h1>
-                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-wind"></i> Breed: Golden Retriever</p>
-                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-regular fa-calendar"></i> Birth: 2023-01-15</p>
-                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-mars-and-venus"></i> Gender: Female</p>
-                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-dollar-sign"></i> Price: 199$</p>
-                    </div>
-                    <div class="flex justify-between">
-                        <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300">
-                            <i class="fa-regular fa-thumbs-up"></i> 
-                        </button>
-                        <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]">
-                            Adopt      
-                        </button>
-                        <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300 text-[#0E7A81] font-bold">
-                            Details
-                        </button>
-                    </div>
-                </div>
-
-                <div class="p-4 space-y-4 border border-gray-300 rounded-lg">
-                    <div>
-                        <img src="https://i.ibb.co.com/p0w744T/pet-1.jpg" alt="Pet images">
-                    </div>
-                    <div class="space-y-2 pb-2 border-b border-gray-300">
-                        <h1 class="inter text-xl font-extrabold">Buddy</h1>
-                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-wind"></i> Breed: Golden Retriever</p>
-                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-regular fa-calendar"></i> Birth: 2023-01-15</p>
-                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-mars-and-venus"></i> Gender: Female</p>
-                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-dollar-sign"></i> Price: 199$</p>
-                    </div>
-                    <div class="flex justify-between">
-                        <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300">
-                            <i class="fa-regular fa-thumbs-up"></i> 
-                        </button>
-                        <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]">
-                            Adopt      
-                        </button>
-                        <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300 text-[#0E7A81] font-bold">
-                            Details
-                        </button>
-                    </div>
-                </div>
-
+            <div class="flex justify-between">
+              <button
+                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300"
+              >
+                <i class="fa-regular fa-thumbs-up"></i>
+              </button>
+              <button
+                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]"
+              >
+                Adopt
+              </button>
+              <button
+                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300 text-[#0E7A81] font-bold"
+              >
+                Details
+              </button>
             </div>
-            <!-- Favorite pet -->
-            <div class="border border-gray-300 p-4 rounded-lg">
-                <div id="fav-container" class="grid grid-cols-2 gap-3">
-                    <div >
-                        <img class="w-[86px] h-24 rounded-lg" src="https://i.ibb.co.com/BwnvDMY/pet-5.jpg" alt="">
-                    </div>
-                    <div >
-                        <img class="w-[86px] h-24 rounded-lg" src="https://i.ibb.co.com/BwnvDMY/pet-5.jpg" alt="">
-                    </div>
-                    <div >
-                        <img class="w-[86px] h-24 rounded-lg" src="https://i.ibb.co.com/BwnvDMY/pet-5.jpg" alt="">
-                    </div>
-                    <div >
-                        <img class="w-[86px] h-24 rounded-lg" src="https://i.ibb.co.com/BwnvDMY/pet-5.jpg" alt="">
-                    </div>
-                </div>
+          </div>
+
+          <div class="p-4 space-y-4 border border-gray-300 rounded-lg">
+            <div>
+              <img
+                src="https://i.ibb.co.com/p0w744T/pet-1.jpg"
+                alt="Pet images"
+              />
             </div>
-        </section>
+            <div class="space-y-2 pb-2 border-b border-gray-300">
+              <h1 class="inter text-xl font-extrabold">Buddy</h1>
+              <p class="lato text-gray-500 text-base flex items-center gap-5">
+                <i class="fa-solid fa-wind"></i> Breed: Golden Retriever
+              </p>
+              <p class="lato text-gray-500 text-base flex items-center gap-5">
+                <i class="fa-regular fa-calendar"></i> Birth: 2023-01-15
+              </p>
+              <p class="lato text-gray-500 text-base flex items-center gap-5">
+                <i class="fa-solid fa-mars-and-venus"></i> Gender: Female
+              </p>
+              <p class="lato text-gray-500 text-base flex items-center gap-5">
+                <i class="fa-solid fa-dollar-sign"></i> Price: 199$
+              </p>
+            </div>
+            <div class="flex justify-between">
+              <button
+                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300"
+              >
+                <i class="fa-regular fa-thumbs-up"></i>
+              </button>
+              <button
+                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]"
+              >
+                Adopt
+              </button>
+              <button
+                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300 text-[#0E7A81] font-bold"
+              >
+                Details
+              </button>
+            </div>
+          </div>
 
+          <div class="p-4 space-y-4 border border-gray-300 rounded-lg">
+            <div>
+              <img
+                src="https://i.ibb.co.com/p0w744T/pet-1.jpg"
+                alt="Pet images"
+              />
+            </div>
+            <div class="space-y-2 pb-2 border-b border-gray-300">
+              <h1 class="inter text-xl font-extrabold">Buddy</h1>
+              <p class="lato text-gray-500 text-base flex items-center gap-5">
+                <i class="fa-solid fa-wind"></i> Breed: Golden Retriever
+              </p>
+              <p class="lato text-gray-500 text-base flex items-center gap-5">
+                <i class="fa-regular fa-calendar"></i> Birth: 2023-01-15
+              </p>
+              <p class="lato text-gray-500 text-base flex items-center gap-5">
+                <i class="fa-solid fa-mars-and-venus"></i> Gender: Female
+              </p>
+              <p class="lato text-gray-500 text-base flex items-center gap-5">
+                <i class="fa-solid fa-dollar-sign"></i> Price: 199$
+              </p>
+            </div>
+            <div class="flex justify-between">
+              <button
+                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300"
+              >
+                <i class="fa-regular fa-thumbs-up"></i>
+              </button>
+              <button
+                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]"
+              >
+                Adopt
+              </button>
+              <button
+                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300 text-[#0E7A81] font-bold"
+              >
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Favorite pet -->
+        <div class="border border-gray-300 p-4 rounded-lg">
+          <div id="fav-container" class="grid grid-cols-2 gap-3">
+            <div>
+              <img
+                class="w-[86px] h-24 rounded-lg"
+                src="https://i.ibb.co.com/BwnvDMY/pet-5.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="w-[86px] h-24 rounded-lg"
+                src="https://i.ibb.co.com/BwnvDMY/pet-5.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="w-[86px] h-24 rounded-lg"
+                src="https://i.ibb.co.com/BwnvDMY/pet-5.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="w-[86px] h-24 rounded-lg"
+                src="https://i.ibb.co.com/BwnvDMY/pet-5.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- Modal section -->
+      <section>
+        <!-- Open the modal using ID.showModal() method -->
+        <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+        <dialog id="displayDetails" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box">
+            <div class="card bg-base-100">
+                <figure>
+                  <img id="dImg" class="w-full"
+                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                  <h2 id="detailsTitle" class="card-title"></h2>
+                  <p id="detailsPara"></p>
+                </div>
+              </div>
+            <div class="modal-action w-full">
+              <form id="form-data" method="dialog " class="w-full" >
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn w-full" onclick="myfunc(e)">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </section>
     </main>
 
     <!-- Footer starts -->
-    <footer class="w-full bg-black text-white p-16 flex flex-col gap-5 lg:flex-row lg:gap-0 justify-between items-start">
-        <div class="flex flex-col">
-            <div class="flex items-center gap-2">
-                <img src="images/logo.webp" alt="Pet Paw Icon">
-                <h1 class="font-extrabold text-2xl">Peddy</h1>
-            </div>
-            <p class="text-base leading-8">
-                Location: av. Washington 165, NY CA 54003 <br>
-                Phone: +31 85 964 47 25 <br>
-                Email: info@yourdomain.com <br>
-                Openings hours: 9.00 AM - 5.00 PM
-            </p>
-            <div class="flex gap-3 py-3">
-                <img src="images/fb1.png" alt="FB Icon">
-                <img src="images/xhandle.png" alt="xhandle">
-                <img src="images/yt.png" alt="yt">
-                <img src="images/insta.png" alt="Instagram Icon">
-            </div>
+    <footer
+      class="w-full bg-black text-white p-16 flex flex-col gap-5 lg:flex-row lg:gap-0 justify-between items-start"
+    >
+      <div class="flex flex-col">
+        <div class="flex items-center gap-2">
+          <img src="images/logo.webp" alt="Pet Paw Icon" />
+          <h1 class="font-extrabold text-2xl">Peddy</h1>
         </div>
-        <div class="flex flex-col space-y-8">
-            <div>
-                <h1 class="inter text-xl text-white">Useful Links</h1>
-            </div>
-            <div class="list-none lato font-normal text-gray-500 text-base space-y-3">
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Animal </li>
-                <li>Foundation</li>
-                <li>Contact</li>
-            </div>
+        <p class="text-base leading-8">
+          Location: av. Washington 165, NY CA 54003 <br />
+          Phone: +31 85 964 47 25 <br />
+          Email: info@yourdomain.com <br />
+          Openings hours: 9.00 AM - 5.00 PM
+        </p>
+        <div class="flex gap-3 py-3">
+          <img src="images/fb1.png" alt="FB Icon" />
+          <img src="images/xhandle.png" alt="xhandle" />
+          <img src="images/yt.png" alt="yt" />
+          <img src="images/insta.png" alt="Instagram Icon" />
         </div>
-        <div class="space-y-4">
-            <h1 class="inter pb-4 font-semibold text-lg">Drop A Message</h1>
-            <input type="text" placeholder="Enter your email" class="input input-neutral bg-gray-900 placeholder:text-gray-400 border-none" />
-            <button class="btn  bg-[#0E7A81] hover:bg-[#08464b] duration-200 text-white font-bold text-lg border-none w-full">Subscribe</button>
+      </div>
+      <div class="flex flex-col space-y-8">
+        <div>
+          <h1 class="inter text-xl text-white">Useful Links</h1>
         </div>
+        <div
+          class="list-none lato font-normal text-gray-500 text-base space-y-3"
+        >
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Animal</li>
+          <li>Foundation</li>
+          <li>Contact</li>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <h1 class="inter pb-4 font-semibold text-lg">Drop A Message</h1>
+        <input
+          type="text"
+          placeholder="Enter your email"
+          class="input input-neutral bg-gray-900 placeholder:text-gray-400 border-none"
+        />
+        <button
+          class="btn bg-[#0E7A81] hover:bg-[#08464b] duration-200 text-white font-bold text-lg border-none w-full"
+        >
+          Subscribe
+        </button>
+      </div>
     </footer>
 
     <script src="scripts/index.js"></script>
-</body>
+  </body>
 </html>

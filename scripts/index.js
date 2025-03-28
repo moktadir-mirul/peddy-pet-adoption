@@ -65,7 +65,7 @@ const displayPets = (pets) => {
                         <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]">
                             Adopt      
                         </button>
-                        <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300 text-[#0E7A81] font-bold">
+                        <button onclick="loadDetails('${pet.petId}')" class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300 text-[#0E7A81] font-bold">
                             Details
                         </button>
                     </div>
@@ -75,3 +75,26 @@ const displayPets = (pets) => {
     }
 }
 loadButtons();
+
+const title = document.getElementById('detailsTitle');
+const para = document.getElementById('detailsPara');
+const image = document.getElementById("dImg");
+console.log(image);
+
+function loadDetails(id) {
+    fetch(`https://openapi.programming-hero.com/api/peddy/pet/${id}`)
+    .then(res => res.json())
+    .then(data => displayDetails(data.petData));
+}
+
+const displayDetails = (details) => {
+    title.innerHTML = `${details.pet_name}`
+    para.innerHTML = `${details.pet_details}`;
+    image.src=`${details.image}`;
+
+    const modal = document.getElementById('displayDetails');
+    modal.showModal();
+}
+function myfunc(event) {
+    event.preventDefault();
+}
