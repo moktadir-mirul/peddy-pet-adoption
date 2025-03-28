@@ -182,7 +182,7 @@
     </main>
 
     <!-- Footer starts -->
-    <footer class="w-full bg-black text-white p-16 flex justify-between items-center">
+    <footer class="w-full bg-black text-white p-16 flex flex-col gap-5 lg:flex-row lg:gap-0 justify-between items-start">
         <div class="flex flex-col">
             <div class="flex items-center gap-2">
                 <img src="images/logo.webp" alt="Pet Paw Icon">
@@ -201,11 +201,22 @@
                 <img src="images/insta.png" alt="Instagram Icon">
             </div>
         </div>
-        <div>
-
+        <div class="flex flex-col space-y-8">
+            <div>
+                <h1 class="inter text-xl text-white">Useful Links</h1>
+            </div>
+            <div class="list-none lato font-normal text-gray-500 text-base space-y-3">
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Animal </li>
+                <li>Foundation</li>
+                <li>Contact</li>
+            </div>
         </div>
-        <div>
-
+        <div class="space-y-4">
+            <h1 class="inter pb-4 font-semibold text-lg">Drop A Message</h1>
+            <input type="text" placeholder="Enter your email" class="input input-neutral bg-gray-900 placeholder:text-gray-400 border-none" />
+            <button class="btn  bg-[#0E7A81] hover:bg-[#08464b] duration-200 text-white font-bold text-lg border-none w-full">Subscribe</button>
         </div>
     </footer>
 
