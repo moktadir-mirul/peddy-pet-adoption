@@ -91,7 +91,11 @@ const displayDetails = (details) => {
     title.innerHTML = `${details.pet_name}`
     para.innerHTML = `${details.pet_details}`;
     image.src=`${details.image}`;
-
+    document.getElementById('breed').innerHTML= `<i class="fa-solid fa-wind"></i> Breed:  ${details.breed}`;
+    document.getElementById('birth').innerHTML= `<i class="fa-regular fa-calendar"></i> Birth:   ${details.date_of_birth}`;
+    document.getElementById('gender').innerHTML= `<i class="fa-solid fa-mars-and-venus"></i> Gender:  ${details.gender}`;
+    document.getElementById('price').innerHTML= `<i class="fa-solid fa-dollar-sign"></i> Price:  ${details.price}`;
+    document.getElementById('vaccine').innerHTML = `<i class="fa-solid fa-mars-and-venus"></i> Vaccinated Status:  ${details.vaccinated_status}`
     const modal = document.getElementById('displayDetails');
     modal.showModal();
 }

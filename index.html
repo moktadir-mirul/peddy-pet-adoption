@@ -287,13 +287,25 @@
                 />
               </figure>
               <div class="card-body">
-                <h2 id="detailsTitle" class="card-title"></h2>
-                <p id="detailsPara"></p>
+                <h2 id="detailsTitle" class="card-title font-bold text-2xl"></h2>
+                <div class="pb-3 border-b border-gray-300">
+                  <p id="breed" class="lato text-gray-500 text-base flex items-center gap-2"> </p>
+                  <p id="birth" class="lato text-gray-500 text-base flex items-center gap-2">${pet.date_of_birth}</p>
+                  <p id="gender" class="lato text-gray-500 text-base flex items-center gap-2"> ${pet.gender}</p>
+                  <p id="price" class="lato text-gray-500 text-base flex items-center gap-2"> ${pet.price}</p>
+                  <p id="vaccine" class="lato text-gray-500 text-base flex items-center gap-2"> </p>
+                </div>
+                <div>
+                  <h1 class="font-medium text-black text-xl space-y-4">Details Information</h1>
+                  <p id="detailsPara" class="lato text-gray-500 text-base">
+
+                  </p>
+                </div>
               </div>
             </div>
             <div class="modal-action w-full">
               <form id="form-data" method="dialog" class="w-full">
-                <button class="btn w-full">Close</button>
+                <button class="btn w-full bg-green-100 hover:bg-green-500 duration-200">Close</button>
               </form>
             </div>
           </div>
