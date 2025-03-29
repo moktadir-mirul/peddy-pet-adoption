@@ -274,34 +274,32 @@
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- Modal section -->
-      <section>
         <!-- Open the modal using ID.showModal() method -->
-        <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
         <dialog id="displayDetails" class="modal modal-bottom sm:modal-middle">
           <div class="modal-box">
             <div class="card bg-base-100">
-                <figure>
-                  <img id="dImg" class="w-full"
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                    alt="Shoes" />
-                </figure>
-                <div class="card-body">
-                  <h2 id="detailsTitle" class="card-title"></h2>
-                  <p id="detailsPara"></p>
-                </div>
+              <figure>
+                <img
+                  id="dImg"
+                  class="w-full"
+                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 id="detailsTitle" class="card-title"></h2>
+                <p id="detailsPara"></p>
               </div>
+            </div>
             <div class="modal-action w-full">
-              <form id="form-data" method="dialog " class="w-full" >
-                <!-- if there is a button in form, it will close the modal -->
-                <button class="btn w-full" onclick="myfunc(e)">Close</button>
+              <form id="form-data" method="dialog" class="w-full">
+                <button class="btn w-full">Close</button>
               </form>
             </div>
           </div>
         </dialog>
       </section>
+
     </main>
 
     <!-- Footer starts -->
