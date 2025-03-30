@@ -59,7 +59,7 @@ const displayPets = (pets) => {
                         <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-dollar-sign"></i> Price: ${pet.price}</p>
                     </div>
                     <div class="flex justify-between">
-                        <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300">
+                        <button id="${pet.petId}" onclick="addFav('${pet.image}', '${pet.petId}')" class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300">
                             <i class="fa-regular fa-thumbs-up"></i> 
                         </button>
                         <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]">
@@ -99,6 +99,16 @@ const displayDetails = (details) => {
     const modal = document.getElementById('displayDetails');
     modal.showModal();
 }
-function myfunc(event) {
-    event.preventDefault();
+function addFav(imgSrc , idbtn) {
+    document.getElementById(idbtn).classList.add('active');
+    const container = document.getElementById('fav-container');
+    const div = document.createElement('div');
+    div.innerHTML = `
+    <img
+                class="w-[86px] h-24 rounded-lg"
+                src="${imgSrc}"
+                alt=""
+              />
+    `
+    container.appendChild(div);
 }
