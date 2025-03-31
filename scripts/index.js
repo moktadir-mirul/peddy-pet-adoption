@@ -62,7 +62,7 @@ const displayPets = (pets) => {
                         <button id="${pet.petId}" onclick="addFav('${pet.image}', '${pet.petId}')" class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300">
                             <i class="fa-regular fa-thumbs-up"></i> 
                         </button>
-                        <button class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]">
+                        <button onclick="adopted()" class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]">
                             Adopt      
                         </button>
                         <button onclick="loadDetails('${pet.petId}')" class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300 text-[#0E7A81] font-bold">
@@ -105,10 +105,27 @@ function addFav(imgSrc , idbtn) {
     const div = document.createElement('div');
     div.innerHTML = `
     <img
-                class="w-[86px] h-24 rounded-lg"
+                class="w-full h-full lg:w-[86px] lg:h-24  rounded-lg"
                 src="${imgSrc}"
                 alt=""
               />
     `
     container.appendChild(div);
+}
+
+let count = 4;
+function adopted() {
+  let counting = setInterval(function mycount() {
+      count--;
+      // console.log(count);
+      if(count <= 0) {
+          clearInterval(counting)
+          console.log('done');
+          count = 4;
+          
+      } else {
+          console.log(count);
+          
+      }
+    }, 1000);
 }
