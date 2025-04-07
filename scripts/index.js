@@ -119,13 +119,15 @@ function adopted() {
       count--;
       // console.log(count);
       if(count <= 0) {
-          clearInterval(counting)
-          console.log('done');
-          count = 4;
-          
+          clearInterval(counting);
+          document.getElementById('adopTime').innerHTML = `<h1 class="text-center text-6xl font-bold inter text-black">Adopted!!!</h1>`;
+          document.getElementById('adopt-btn').classList.remove('btn-disabled');
+          count = 4;   
       } else {
           console.log(count);
-          
+          document.getElementById('adoptedBtn').showModal();
+          document.getElementById('adopTime').innerHTML = `${count}`;
+          document.getElementById('adopt-btn').classList.add('btn-disabled') 
       }
     }, 1000);
 }

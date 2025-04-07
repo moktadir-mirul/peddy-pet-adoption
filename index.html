@@ -121,14 +121,17 @@
           class="col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"
         >
           <!-- Pet Card -->
-          <div class="p-4 space-y-4 border border-gray-300 rounded-lg text-center md:text-left">
+          <div
+            class="p-4 space-y-4 border border-gray-300 rounded-lg text-center md:text-left"
+          >
             <div>
-              <img class="mx-auto"
+              <img
+                class="mx-auto"
                 src="https://i.ibb.co.com/p0w744T/pet-1.jpg"
                 alt="Pet images"
               />
             </div>
-            <div class="space-y-2 pb-2 border-b border-gray-300 mx-auto">
+            <div class="space-y-2 pb-2 border-b border-gray-300">
               <h1 class="inter text-xl font-extrabold">Buddy</h1>
               <p class="lato text-gray-500 text-base flex items-center gap-5">
                 <i class="fa-solid fa-wind"></i> Breed: Golden Retriever
@@ -290,31 +293,71 @@
                 />
               </figure>
               <div class="card-body">
-                <h2 id="detailsTitle" class="card-title font-bold text-2xl"></h2>
+                <h2
+                  id="detailsTitle"
+                  class="card-title font-bold text-2xl"
+                ></h2>
                 <div class="pb-3 border-b border-gray-300">
-                  <p id="breed" class="lato text-gray-500 text-base flex items-center gap-2"> </p>
-                  <p id="birth" class="lato text-gray-500 text-base flex items-center gap-2">${pet.date_of_birth}</p>
-                  <p id="gender" class="lato text-gray-500 text-base flex items-center gap-2"> ${pet.gender}</p>
-                  <p id="price" class="lato text-gray-500 text-base flex items-center gap-2"> ${pet.price}</p>
-                  <p id="vaccine" class="lato text-gray-500 text-base flex items-center gap-2"> </p>
+                  <p
+                    id="breed"
+                    class="lato text-gray-500 text-base flex items-center gap-2"
+                  ></p>
+                  <p
+                    id="birth"
+                    class="lato text-gray-500 text-base flex items-center gap-2"
+                  >
+                    ${pet.date_of_birth}
+                  </p>
+                  <p
+                    id="gender"
+                    class="lato text-gray-500 text-base flex items-center gap-2"
+                  >
+                    ${pet.gender}
+                  </p>
+                  <p
+                    id="price"
+                    class="lato text-gray-500 text-base flex items-center gap-2"
+                  >
+                    ${pet.price}
+                  </p>
+                  <p
+                    id="vaccine"
+                    class="lato text-gray-500 text-base flex items-center gap-2"
+                  ></p>
                 </div>
                 <div>
-                  <h1 class="font-medium text-black text-xl space-y-4">Details Information</h1>
-                  <p id="detailsPara" class="lato text-gray-500 text-base">
-
-                  </p>
+                  <h1 class="font-medium text-black text-xl space-y-4">
+                    Details Information
+                  </h1>
+                  <p id="detailsPara" class="lato text-gray-500 text-base"></p>
                 </div>
               </div>
             </div>
             <div class="modal-action w-full">
               <form id="form-data" method="dialog" class="w-full">
-                <button class="btn w-full bg-green-100 hover:bg-green-500 duration-200">Close</button>
+                <button
+                  class="btn w-full bg-green-100 hover:bg-green-500 duration-200"
+                >
+                  Close
+                </button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="adoptedBtn" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box">
+            <h3 id="adopTime" class="text-center text-5xl inter font-bold">Hello!</h3>
+            <div class="modal-action w-full flex justify-center">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button id="adopt-btn" class="btn">Close</button>
               </form>
             </div>
           </div>
         </dialog>
       </section>
-
     </main>
 
     <!-- Footer starts -->
