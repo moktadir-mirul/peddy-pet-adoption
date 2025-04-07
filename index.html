@@ -102,7 +102,7 @@
         >
           <h1 class="text-2xl font-bold">Best Deal For You</h1>
           <div>
-            <button
+            <button id="sort-btn"
               class="btn btn-lg w-44 mx-auto bg-[#0E7A81] text-white hover:bg-[#063538] duration-200"
             >
               Sort By Price
@@ -113,7 +113,6 @@
 
       <!-- Pet Display -->
       <section
-        onclick=""
         class="w-4/5 py-5 mx-auto grid grid-cols-1 lg:grid-cols-5 gap-3"
       >
         <div
@@ -121,130 +120,14 @@
           class="col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"
         >
           <!-- Pet Card -->
-          <div
-            class="p-4 space-y-4 border border-gray-300 rounded-lg text-center md:text-left"
-          >
-            <div>
-              <img
-                class="mx-auto"
-                src="https://i.ibb.co.com/p0w744T/pet-1.jpg"
-                alt="Pet images"
-              />
-            </div>
-            <div class="space-y-2 pb-2 border-b border-gray-300">
-              <h1 class="inter text-xl font-extrabold">Buddy</h1>
-              <p class="lato text-gray-500 text-base flex items-center gap-5">
-                <i class="fa-solid fa-wind"></i> Breed: Golden Retriever
-              </p>
-              <p class="lato text-gray-500 text-base flex items-center gap-5">
-                <i class="fa-regular fa-calendar"></i> Birth: 2023-01-15
-              </p>
-              <p class="lato text-gray-500 text-base flex items-center gap-5">
-                <i class="fa-solid fa-mars-and-venus"></i> Gender: Female
-              </p>
-              <p class="lato text-gray-500 text-base flex items-center gap-5">
-                <i class="fa-solid fa-dollar-sign"></i> Price: 199$
-              </p>
-            </div>
-            <div class="flex justify-between">
-              <button
-                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300"
-              >
-                <i class="fa-regular fa-thumbs-up"></i>
-              </button>
-              <button
-                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]"
-              >
-                Adopt
-              </button>
-              <button
-                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300 text-[#0E7A81] font-bold"
-              >
-                Details
-              </button>
-            </div>
-          </div>
-
-          <div class="p-4 space-y-4 border border-gray-300 rounded-lg">
-            <div>
-              <img
-                src="https://i.ibb.co.com/p0w744T/pet-1.jpg"
-                alt="Pet images"
-              />
-            </div>
-            <div class="space-y-2 pb-2 border-b border-gray-300">
-              <h1 class="inter text-xl font-extrabold">Buddy</h1>
-              <p class="lato text-gray-500 text-base flex items-center gap-5">
-                <i class="fa-solid fa-wind"></i> Breed: Golden Retriever
-              </p>
-              <p class="lato text-gray-500 text-base flex items-center gap-5">
-                <i class="fa-regular fa-calendar"></i> Birth: 2023-01-15
-              </p>
-              <p class="lato text-gray-500 text-base flex items-center gap-5">
-                <i class="fa-solid fa-mars-and-venus"></i> Gender: Female
-              </p>
-              <p class="lato text-gray-500 text-base flex items-center gap-5">
-                <i class="fa-solid fa-dollar-sign"></i> Price: 199$
-              </p>
-            </div>
-            <div class="flex justify-between">
-              <button
-                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300"
-              >
-                <i class="fa-regular fa-thumbs-up"></i>
-              </button>
-              <button
-                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]"
-              >
-                Adopt
-              </button>
-              <button
-                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300 text-[#0E7A81] font-bold"
-              >
-                Details
-              </button>
-            </div>
-          </div>
-
-          <div class="p-4 space-y-4 border border-gray-300 rounded-lg">
-            <div>
-              <img
-                src="https://i.ibb.co.com/p0w744T/pet-1.jpg"
-                alt="Pet images"
-              />
-            </div>
-            <div class="space-y-2 pb-2 border-b border-gray-300">
-              <h1 class="inter text-xl font-extrabold">Buddy</h1>
-              <p class="lato text-gray-500 text-base flex items-center gap-5">
-                <i class="fa-solid fa-wind"></i> Breed: Golden Retriever
-              </p>
-              <p class="lato text-gray-500 text-base flex items-center gap-5">
-                <i class="fa-regular fa-calendar"></i> Birth: 2023-01-15
-              </p>
-              <p class="lato text-gray-500 text-base flex items-center gap-5">
-                <i class="fa-solid fa-mars-and-venus"></i> Gender: Female
-              </p>
-              <p class="lato text-gray-500 text-base flex items-center gap-5">
-                <i class="fa-solid fa-dollar-sign"></i> Price: 199$
-              </p>
-            </div>
-            <div class="flex justify-between">
-              <button
-                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300"
-              >
-                <i class="fa-regular fa-thumbs-up"></i>
-              </button>
-              <button
-                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]"
-              >
-                Adopt
-              </button>
-              <button
-                class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300 text-[#0E7A81] font-bold"
-              >
-                Details
-              </button>
-            </div>
+          <div class="col-span-full flex flex-col gap-6 justify-center items-center">
+            <i class="fa-solid fa-circle-exclamation fa-2xl text-[#0E7A81]"></i>
+            <h1 class="text-center text-3xl text-[#0E7A81] lato font-bold">
+              You haven't selected any category yet!
+            </h1>
+            <p class="text-lg text-gray-600 inter font-semibold">
+              Please select a category first from the above!
+            </p>
           </div>
         </div>
         <!-- Favorite pet -->
@@ -352,7 +235,7 @@
             <div class="modal-action w-full flex justify-center">
               <form method="dialog">
                 <!-- if there is a button in form, it will close the modal -->
-                <button id="adopt-btn" class="btn hidden">Close</button>
+                <button id="adopt-btn" class="btn">Close</button>
               </form>
             </div>
           </div>
@@ -412,6 +295,6 @@
     </footer>
 
     <script src="scripts/index.js"></script>
-    <script src="scripts/inter.js"></script>
+    <script src="scripts/sorting.js"></script>
   </body>
 </html>

@@ -3,10 +3,9 @@ const loadButtons = () => {
     .then(res => res.json())
     .then(data => displayCategories(data.categories))
 }
-
+const container = document.getElementById('fav-container');
 const displayCategories = (btnsName) => {
     const btns = btnsName;
-    console.log(btns)
     for(let btn of btns) {
         const btnContainer = document.getElementById('btn-container');
         const div = document.createElement('div');
@@ -43,8 +42,7 @@ const displayPets = (pets) => {
             `
             return;
         }
-    for(let pet of pets) {
-        
+    for(let pet of pets) {  
         const div = document.createElement('div');
         div.innerHTML = `
         <div class="p-4 space-y-4 border border-gray-300 rounded-lg">
@@ -56,7 +54,7 @@ const displayPets = (pets) => {
                         <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-wind"></i> Breed: ${pet.breed}</p>
                         <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-regular fa-calendar"></i> Birth: ${pet.date_of_birth}</p>
                         <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-mars-and-venus"></i> Gender: ${pet.gender}</p>
-                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-dollar-sign"></i> Price: ${pet.price}</p>
+                        <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-dollar-sign"></i> Price: ${pet.price ? pet.price: 'Unknown'}</p>
                     </div>
                     <div class="flex justify-between">
                         <button id="${pet.petId}" onclick="addFav('${pet.image}', '${pet.petId}')" class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300">
@@ -73,13 +71,49 @@ const displayPets = (pets) => {
         `
         petContainer.appendChild(div);
     }
+    const sortBtn = document.getElementById('sort-btn');
+    sortBtn.addEventListener('click', function() {
+        let arr3 = pets.sort(function(a, b) {
+            return a.price - b.price;
+        });
+        petContainer.innerHTML='';
+        for(let pet of arr3) {  
+            const div = document.createElement('div');
+            div.innerHTML = `
+            <div class="p-4 space-y-4 border border-gray-300 rounded-lg">
+                        <div>
+                            <img src="${pet.image}" alt="Pet images">
+                        </div>
+                        <div class="space-y-2 pb-2 border-b border-gray-300">
+                            <h1 class="inter text-xl font-extrabold">${pet.pet_name}</h1>
+                            <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-wind"></i> Breed: ${pet.breed}</p>
+                            <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-regular fa-calendar"></i> Birth: ${pet.date_of_birth}</p>
+                            <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-mars-and-venus"></i> Gender: ${pet.gender}</p>
+                            <p class="lato text-gray-500 text-base flex items-center gap-5"><i class="fa-solid fa-dollar-sign"></i> Price: ${pet.price ? pet.price: 'Unknown'}</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <button id="${pet.petId}" onclick="addFav('${pet.image}', '${pet.petId}')" class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300">
+                                <i class="fa-regular fa-thumbs-up"></i> 
+                            </button>
+                            <button id="${pet.pet_name}" onclick="adopted('${pet.pet_name}')" class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]">
+                                Adopt      
+                            </button>
+                            <button onclick="loadDetails('${pet.petId}')" class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300 text-[#0E7A81] font-bold">
+                                Details
+                            </button>
+                        </div>
+                    </div>
+            `
+            petContainer.appendChild(div);
+        }
+        container.innerHTML='';
+    })
 }
 loadButtons();
 
 const title = document.getElementById('detailsTitle');
 const para = document.getElementById('detailsPara');
 const image = document.getElementById("dImg");
-console.log(image);
 
 function loadDetails(id) {
     fetch(`https://openapi.programming-hero.com/api/peddy/pet/${id}`)
@@ -101,7 +135,7 @@ const displayDetails = (details) => {
 }
 function addFav(imgSrc , idbtn) {
     document.getElementById(idbtn).classList.add('active');
-    const container = document.getElementById('fav-container');
+    
     const div = document.createElement('div');
     div.innerHTML = `
     <img
@@ -122,7 +156,7 @@ function adopted(petID) {
           document.getElementById('adopTime').innerHTML = `<h1 class="text-center text-6xl font-bold inter text-black">Adopted!!!</h1>`;
           document.getElementById('adopt-btn').classList.remove('btn-disabled');
           document.getElementById(petID).innerHTML= `Adopted`;
-          document.getElementById('adoptedBtn').classList.add('hidden');
+          document.getElementById(petID).classList.add('btn-disabled')
           count = 4;   
       } else {
           document.getElementById('adoptedBtn').showModal();
