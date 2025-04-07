@@ -62,7 +62,7 @@ const displayPets = (pets) => {
                         <button id="${pet.petId}" onclick="addFav('${pet.image}', '${pet.petId}')" class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300">
                             <i class="fa-regular fa-thumbs-up"></i> 
                         </button>
-                        <button onclick="adopted()" class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]">
+                        <button id="${pet.pet_name}" onclick="adopted('${pet.pet_name}')" class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] font-bold duration-300 text-[#0E7A81]">
                             Adopt      
                         </button>
                         <button onclick="loadDetails('${pet.petId}')" class="btn border border-[#0e7a8126] rounded-xl hover:bg-[#0E7A811A] duration-300 text-[#0E7A81] font-bold">
@@ -114,17 +114,17 @@ function addFav(imgSrc , idbtn) {
 }
 
 let count = 4;
-function adopted() {
+function adopted(petID) {
   let counting = setInterval(function mycount() {
       count--;
-      // console.log(count);
       if(count <= 0) {
           clearInterval(counting);
           document.getElementById('adopTime').innerHTML = `<h1 class="text-center text-6xl font-bold inter text-black">Adopted!!!</h1>`;
           document.getElementById('adopt-btn').classList.remove('btn-disabled');
+          document.getElementById(petID).innerHTML= `Adopted`;
+          document.getElementById('adoptedBtn').classList.add('hidden');
           count = 4;   
       } else {
-          console.log(count);
           document.getElementById('adoptedBtn').showModal();
           document.getElementById('adopTime').innerHTML = `${count}`;
           document.getElementById('adopt-btn').classList.add('btn-disabled') 
