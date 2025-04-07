@@ -29,7 +29,9 @@ const displayPets = (pets) => {
     console.log(pets);
     const petContainer = document.getElementById('pet-container');
         petContainer.innerHTML='';
+        document.getElementById('sort-btn').classList.remove('btn-disabled');
         if(pets.length <=0) {
+            document.getElementById('sort-btn').classList.add('btn-disabled');
             petContainer.innerHTML = `
                     <div class="col-span-4 bg-gray-300 space-y-5 rounded-lg p-8 text-center">
                         <img class="w-36 mx-auto" src="images/error.webp" alt="Error Icon">
@@ -73,10 +75,10 @@ const displayPets = (pets) => {
     }
     const sortBtn = document.getElementById('sort-btn');
     sortBtn.addEventListener('click', function() {
-        let arr3 = pets.sort(function(a, b) {
-            return a.price - b.price;
-        });
-        petContainer.innerHTML='';
+            let arr3 = pets.sort(function(a, b) {
+                return a.price - b.price;
+            });
+            petContainer.innerHTML='';
         for(let pet of arr3) {  
             const div = document.createElement('div');
             div.innerHTML = `
@@ -104,7 +106,7 @@ const displayPets = (pets) => {
                         </div>
                     </div>
             `
-            petContainer.appendChild(div);
+            petContainer.appendChild(div); 
         }
         container.innerHTML='';
     })
